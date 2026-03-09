@@ -2,17 +2,15 @@
 
 First public binary release of IEC60870 101/104 Protocol Test Analyzer.
 
-Built as a practical free alternative to expensive protocol analyzers, this tool is designed for real FAT, SAT, and SCADA commissioning work on IEC 60870-5-104 and IEC 60870-5-101 systems.
-
-Instead of only showing raw packets, it helps engineers work faster with clearer data views, internal event logs, SOE cross-check support, capture replay, and actionable Findings that highlight communication issues before they become operational problems.
+This release introduces an internally developed diagnostic support platform intended to improve IEC-101 and IEC-104 verification workflow during FAT, SAT, commissioning, troubleshooting, and product readiness activities.
 
 ## Why This Release Matters
 
-- Free to try for real project work
-- Built for SCADA, substation, and commissioning engineers
-- Speeds up point-to-point validation and troubleshooting
-- Helps expose command mismatch, class mismatch, Type ID mismatch, and timestamp issues
-- Provides better visibility for communication behavior during burst or worst-case traffic conditions
+- Supports a more transparent and repeatable verification workflow
+- Helps reduce troubleshooting iteration through better protocol visibility
+- Improves technical evidence quality for FAT, SAT, and issue clarification
+- Supports earlier detection of data class, IOA mapping, and command behavior issues
+- Extends value beyond project execution into homologation or certification readiness support
 
 ## Highlights
 
@@ -25,14 +23,14 @@ Instead of only showing raw packets, it helps engineers work faster with clearer
 - Capture save and replay workflow for investigation and reporting
 - Includes `IecSlaveSimulator.exe` helper tool
 
-## Best Use Cases
+## Practical Value
 
-- FAT and SAT point-to-point validation
-- Investigating failed or mismatched commands
-- Checking Class 1 and Class 2 traffic behavior
-- Cross-checking RTU or Gateway data against SCADA master expectations
-- Reviewing SOE timestamp consistency between systems
-- Creating evidence for troubleshooting, reporting, and vendor discussion
+The platform is intended to help engineering teams:
+
+- accelerate FAT and SAT troubleshooting cycles
+- reduce repeated point-to-point rework
+- improve confidence before handover and energization
+- support certification readiness where Data Class and ACD behavior must be clarified
 
 ## Included Files
 
@@ -53,5 +51,5 @@ Instead of only showing raw packets, it helps engineers work faster with clearer
 ## Notes
 
 - This repository provides release binaries only.
-- IEC-101 capability is available and can continue improving in future releases.
-- This tool is intended to help engineers reduce commissioning time, improve visibility, and catch configuration issues earlier.
+- The platform is intended as a supporting diagnostic aid and complements existing engineering checks.
+- IEC-101 capability is available and may continue evolving in future releases.

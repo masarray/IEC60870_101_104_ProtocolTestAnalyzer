@@ -2,9 +2,9 @@
 
 ## Purpose
 
-IEC60870 101/104 Protocol Test Analyzer is built to support FAT, SAT, and SCADA commissioning work for IEC 60870-5-104 and IEC 60870-5-101 systems.
+IEC60870 101/104 Protocol Test Analyzer is an internally developed diagnostic support platform used to improve IEC-101 and IEC-104 verification workflow during FAT, SAT, commissioning, troubleshooting, and product readiness activities.
 
-This tool helps engineers validate point mapping, observe protocol behavior, investigate command mismatch, review SOE and event flow, and identify reliability issues earlier.
+The platform is intended to help engineers validate point mapping, observe protocol behavior, investigate command mismatch, review SOE and event flow, and identify reliability issues earlier with better technical evidence.
 
 ## Main Workflow
 
@@ -19,7 +19,7 @@ This tool helps engineers validate point mapping, observe protocol behavior, inv
 
 ### Line Monitor
 
-The line monitor presents protocol activity in a human-readable flow, making it easier to understand actual IEC traffic without reading raw packets only.
+The line monitor presents protocol activity in a human-readable flow, making it easier to understand actual IEC traffic without relying only on raw packet data.
 
 ![Line Monitor](../assets/images/17-line-monitor.png)
 
@@ -46,7 +46,7 @@ Use this panel to verify:
 
 ### Findings
 
-The Findings panel highlights observations that may indicate reliability or engineering issues.
+The Findings panel highlights observations that may indicate reliability, mapping, or engineering issues.
 
 ![Findings](../assets/images/06-findings-panel.png)
 
@@ -68,6 +68,7 @@ Use this for:
 - FAT and SAT evidence
 - troubleshooting session behavior
 - reviewing connect, disconnect, and command actions
+- supporting technical clarification and handover confidence
 
 ## Command Testing
 
@@ -139,7 +140,7 @@ The glossary provides quick interpretation support for protocol terms and object
 
 ![SCADA Event Log Panel](../assets/images/19-scada-event-logs-panel.png)
 
-These views help engineers compare field events with SCADA-side interpretation and timestamp behavior.
+These views help engineers compare field events with SCADA-side interpretation, timestamp behavior, and point-to-point verification expectations.
 
 ## Connection Setup
 
@@ -153,7 +154,7 @@ These views help engineers compare field events with SCADA-side interpretation a
 
 ## Capture and Replay
 
-The analyzer supports capture save and replay workflows for post-test analysis, investigation, and report evidence.
+The analyzer supports capture save and replay workflows for post-test analysis, investigation, technical evidence, and reporting.
 
 ![Save Capture](../assets/images/09-save-capture.png)
 ![Open Replay](../assets/images/10-open-replay.png)
@@ -168,3 +169,8 @@ Use this tool when you need to investigate:
 - value or quality mismatch
 - SOE timestamp inconsistency
 - worst-case traffic behavior under measurement burst
+- product readiness before homologation or certification-related activities
+
+## Note
+
+This platform is intended as a supporting diagnostic aid. It complements engineering checks and existing protocol tools, and it does not replace engineering judgement or formal FAT/SAT procedures.

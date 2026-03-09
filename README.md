@@ -1,30 +1,41 @@
 ﻿# IEC60870 101/104 Protocol Test Analyzer
 
-Free alternative for IEC 60870-5-104 and IEC 60870-5-101 FAT/SAT testing, built for practical SCADA commissioning work.
+An internally developed diagnostic support platform for improving IEC-101 and IEC-104 verification workflow during FAT, SAT, commissioning, troubleshooting, and product readiness activities.
+
 This repository is release-only and provides public-facing documentation plus binary download links.
 
 ## Why This Tool Exists
 
-Commercial protocol analyzers are useful, but in many projects they are expensive, limited in availability, or not focused on the exact pain points faced during FAT, SAT, and point-to-point commissioning.
+IEC-101 and IEC-104 verification often requires engineers to manually correlate gateway settings, point mapping, command behavior, event flow, and master SCADA response. In practice, this can create repeated troubleshooting loops, additional engineering effort, and dependency on individual experience.
 
-This tool is designed to help SCADA engineers, substation engineers, and integrators work faster when validating:
+This tool was developed to support a more transparent and repeatable workflow by providing:
 
-- IOA to point mapping
-- value and quality consistency
-- SOE timestamp behavior
-- command execution and command mismatch
-- data priority behavior under traffic burst
-- protocol reliability findings that should be corrected before operation
+- clearer visibility of protocol behavior
+- faster root cause identification
+- stronger technical evidence for FAT, SAT, and troubleshooting discussion
+- more consistent validation of point mapping, command behavior, and data priority handling
+- additional readiness support for homologation or certification activities
 
-## What Makes It Different
+## What It Enables
 
-- Human-readable line monitor instead of raw packet-only inspection
-- Last known value viewer with IOA, value, quality, COT, class, context, and timestamp in one place
-- Internal event and status history panels for FAT/SAT evidence and troubleshooting
-- Findings panel that explains what may be wrong and what should be improved
-- Built-in command testing workflow for GI, time sync, single command, double command, and setpoint command
-- Capture and replay workflow for investigation and reporting
-- Small utility features such as IOA structured converter that help real field work
+- IEC-101 and IEC-104 verification workflow support
+- Human-readable protocol flow analysis
+- Faster cross-check of IOA, value, quality, COT, class, context, and timestamp
+- Earlier detection of data class, IOA mapping, and command behavior issues
+- Better FAT/SAT evidence through event logs, status history, and capture replay
+- Automatic findings that reduce dependence on individual interpretation
+- Practical readiness support for SICAM A8000 and SICAM S8000 before PLN Pusertif homologation or certification activities
+
+## Main Engineering Value
+
+This platform supports practical process improvement in the following areas:
+
+- FAT and SAT acceleration through faster troubleshooting cycles
+- potential reduction of repeated point-to-point rework
+- engineering hour savings through better visibility and evidence correlation
+- schedule delay avoidance through earlier detection of communication issues
+- improved handover quality through clearer validation records
+- stronger standardization and knowledge transfer across projects
 
 ## Flagship Screenshots
 
@@ -53,78 +64,36 @@ This tool is designed to help SCADA engineers, substation engineers, and integra
 ![Time Sync Command](assets/images/24-time-sync-command.png)
 ![General Interrogation](assets/images/14-general-interrogation.png)
 
-## Supporting Screenshots
+## Main Use Cases
 
-### Connection Setup
+### Data class and priority validation
 
-![IEC-104 Connection Setup](assets/images/01-connection-setup-iec104.png)
-![IEC-101 Connection Setup](assets/images/02-connection-setup-iec101.png)
+Use the platform to identify whether event and measurement traffic are grouped correctly and whether high-priority data behavior remains aligned with expected SCADA traffic handling.
 
-### Monitoring and Analysis Panels
+### IOA mapping validation
 
-![Data Value Viewer](assets/images/03-data-value-viewer.png)
-![SOE Event Logs](assets/images/04-soe-event-logs.png)
-![SCADA Event Logs](assets/images/05-scada-event-logs.png)
-![Structured View](assets/images/07-structured-view.png)
-![Command Panel](assets/images/08-command-panel.png)
-![Event Log Panel](assets/images/13-event-log-panel.png)
-![SOE Event Log Panel](assets/images/22-soe-event-log-panel.png)
-![SCADA Event Log Panel](assets/images/19-scada-event-logs-panel.png)
-![Save Capture](assets/images/09-save-capture.png)
-![Open Replay](assets/images/10-open-replay.png)
+Use the platform to detect mapping mismatches such as swapped IOA structures, incorrect point assignment, or inconsistency between gateway engineering data and master SCADA expectations.
 
-### Reference and Utility Views
+### Command behavior validation
 
-![Protocol Context](assets/images/01-protocol-context.png)
-![Protocol Context Panel](assets/images/18-protocol-context-panel.png)
-![Glossary](assets/images/01-glossary.png)
-![IOA Converter](assets/images/15-ioa-converter.png)
+Use the platform to analyze:
 
-## Real Field Use Cases
+- Direct Operate versus Select Before Operate behavior
+- activation, confirmation, and termination sequence consistency
+- unexpected command response behavior
 
-### Command mismatch analysis
+### Technical evidence for FAT/SAT and troubleshooting
 
-Useful when command execution fails because of:
+Use event logs, status history, line monitor, and capture replay to support technical clarification and improve alignment during testing and troubleshooting.
 
-- wrong IOA mapping
-- wrong command type assignment
-- direct operate versus SBO mismatch
-- unexpected activation or confirmation behavior
+### Certification readiness support
 
-This helps identify why a command is sent but not executed correctly.
-
-### Class 1 and Class 2 mismatch analysis
-
-Useful when communication becomes unstable because:
-
-- measurement data is assigned to the wrong class
-- traffic burst overwhelms expected command responsiveness
-- priority behavior does not match the intended SCADA design
-
-This helps verify that command traffic still works in the worst communication condition.
-
-### Type identification and value interpretation check
-
-Useful when point data is present but wrong because of:
-
-- incorrect Type ID mapping
-- inconsistent value scaling or interpretation
-- invalid quality behavior
-- SOE timestamp mismatch between systems
-
-This helps speed up FAT and SAT troubleshooting.
-
-## Typical Workflow
-
-1. Download the latest binary package from Releases.
-2. Run the analyzer and connect using IEC-104 or IEC-101 settings.
-3. Monitor values, event logs, command behavior, and status history.
-4. Review Findings for issues that should be corrected.
-5. Save capture files for replay, evidence, and reporting.
+Use the platform to support product readiness for homologation or certification activities, especially where Data Class and ACD behavior must be demonstrated clearly.
 
 ## User Docs
 
 - [Quick Start](docs/Quick-Start.md)
+- [User Manual](docs/User-Manual.md)
 - [Release Notes Template](docs/Release-Notes-Template.md)
 - [Package Structure](docs/Package-Structure.md)
 - [Release Guide](docs/Release-Guide.md)
@@ -134,13 +103,7 @@ This helps speed up FAT and SAT troubleshooting.
 - [Latest Release](https://github.com/masarray/IEC60870_101_104_ProtocolTestAnalyzer/releases/latest)
 - Recommended package format: `IEC60870-Protocol-Test-Analyzer-vX.Y.Z-win-x64.zip`
 
-## Repository Layout
-
-- `assets/images` : screenshots used by the public README and docs
-- `docs` : public user-facing notes and quick help
-- `package` : optional local staging folder for release zip contents before publishing
-
 ## Notes
 
 - This repository does not contain the private development source code.
-- Release binaries should be distributed through GitHub Releases, not committed repeatedly into the repository history.
+- Release binaries should be distributed through GitHub Releases, not committed repeatedly into repository history.

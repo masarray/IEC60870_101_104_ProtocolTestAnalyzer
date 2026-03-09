@@ -1,5 +1,9 @@
 ﻿# Quick Start
 
+## Purpose
+
+This release package provides an internally developed diagnostic support tool intended to improve IEC-101 and IEC-104 verification workflow during FAT, SAT, commissioning, troubleshooting, and product readiness activities.
+
 ## What You Need
 
 - Windows x64 machine
@@ -37,15 +41,16 @@ After connection starts, verify:
 - command tests produce expected responses
 - Findings panel does not show critical issues
 
-## FAT/SAT Practical Use
+## Recommended Practical Use
 
-Use the tool to validate:
+Use the platform to support:
 
-- point-to-point mapping between RTU or Gateway and SCADA master
-- command behavior for DO and SBO schemes
-- data class behavior during heavy traffic or burst conditions
-- incorrect Type ID or quality interpretation
-- capture replay evidence for vendor review or reports
+- point-to-point mapping verification between RTU or Gateway and master SCADA
+- command behavior validation for DO and SBO schemes
+- data class and priority behavior checks under heavy traffic or burst conditions
+- Type ID, quality, and timestamp consistency review
+- capture replay evidence for FAT/SAT, troubleshooting, and reporting
+- readiness review before homologation or certification-related testing
 
 ## Troubleshooting Basics
 
@@ -65,10 +70,11 @@ Use the tool to validate:
 
 - Compare IOA against the point database.
 - Check Type ID and Cause of Transmission.
-- Verify scaling, quality, and timestamp behavior.
+- Verify scaling, quality, class grouping, and timestamp behavior.
 
 ## Related Documents
 
 - [README](../README.md)
+- [User Manual](User-Manual.md)
 - [Release Notes Template](Release-Notes-Template.md)
 - [Package Structure](Package-Structure.md)
