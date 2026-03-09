@@ -16,36 +16,69 @@ This tool is designed to help SCADA engineers, substation engineers, and integra
 - data priority behavior under traffic burst
 - protocol reliability findings that should be corrected before operation
 
-## Key Value
+## What Makes It Different
 
-- Free to try and practical for field work
-- Easier to read than raw packet-only analyzers
-- Internal Event Log for cross-check between substation and master SCADA teams
-- Findings panel to expose likely configuration or engineering mistakes
-- Capture and replay workflow for investigation and evidence
+- Human-readable line monitor instead of raw packet-only inspection
+- Last known value viewer with IOA, value, quality, COT, class, context, and timestamp in one place
+- Internal event and status history panels for FAT/SAT evidence and troubleshooting
+- Findings panel that explains what may be wrong and what should be improved
+- Built-in command testing workflow for GI, time sync, single command, double command, and setpoint command
+- Capture and replay workflow for investigation and reporting
+- Small utility features such as IOA structured converter that help real field work
 
-## Screenshots
+## Flagship Screenshots
+
+### Human-Readable Protocol Flow
+
+![Line Monitor](assets/images/17-line-monitor.png)
+
+### Last Known Value Cross-Check
+
+![Last Known Values](assets/images/16-last-known-values.png)
+
+### Findings and Reliability Insight
+
+![Findings Panel](assets/images/06-findings-panel.png)
+
+### Status and Session Audit Trail
+
+![Status History](assets/images/23-status-history.png)
+
+### Command Testing Workflow
+
+![Command Function Selector](assets/images/11-command-function-selector.png)
+![Single Command](assets/images/21-single-command.png)
+![Double Command](assets/images/12-double-command.png)
+![Setpoint Command](assets/images/20-setpoint-command.png)
+![Time Sync Command](assets/images/24-time-sync-command.png)
+![General Interrogation](assets/images/14-general-interrogation.png)
+
+## Supporting Screenshots
 
 ### Connection Setup
 
 ![IEC-104 Connection Setup](assets/images/01-connection-setup-iec104.png)
 ![IEC-101 Connection Setup](assets/images/02-connection-setup-iec101.png)
 
-### Monitoring and Analysis
+### Monitoring and Analysis Panels
 
 ![Data Value Viewer](assets/images/03-data-value-viewer.png)
 ![SOE Event Logs](assets/images/04-soe-event-logs.png)
 ![SCADA Event Logs](assets/images/05-scada-event-logs.png)
-![Findings Panel](assets/images/06-findings-panel.png)
 ![Structured View](assets/images/07-structured-view.png)
 ![Command Panel](assets/images/08-command-panel.png)
+![Event Log Panel](assets/images/13-event-log-panel.png)
+![SOE Event Log Panel](assets/images/22-soe-event-log-panel.png)
+![SCADA Event Log Panel](assets/images/19-scada-event-logs-panel.png)
 ![Save Capture](assets/images/09-save-capture.png)
 ![Open Replay](assets/images/10-open-replay.png)
 
-### Reference Views
+### Reference and Utility Views
 
 ![Protocol Context](assets/images/01-protocol-context.png)
+![Protocol Context Panel](assets/images/18-protocol-context-panel.png)
 ![Glossary](assets/images/01-glossary.png)
+![IOA Converter](assets/images/15-ioa-converter.png)
 
 ## Real Field Use Cases
 
@@ -85,7 +118,7 @@ This helps speed up FAT and SAT troubleshooting.
 
 1. Download the latest binary package from Releases.
 2. Run the analyzer and connect using IEC-104 or IEC-101 settings.
-3. Monitor values, event logs, and command behavior.
+3. Monitor values, event logs, command behavior, and status history.
 4. Review Findings for issues that should be corrected.
 5. Save capture files for replay, evidence, and reporting.
 
@@ -111,5 +144,3 @@ This helps speed up FAT and SAT troubleshooting.
 
 - This repository does not contain the private development source code.
 - Release binaries should be distributed through GitHub Releases, not committed repeatedly into the repository history.
-
-
