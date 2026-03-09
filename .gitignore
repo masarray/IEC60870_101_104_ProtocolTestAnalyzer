@@ -1,0 +1,4 @@
+﻿/package/*.zip
+/package/*.7z
+/package/*.msi
+/package/*.exe
